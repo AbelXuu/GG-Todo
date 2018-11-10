@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EC54C09D2195D6C300E08990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09C2195D6C300E08990 /* AppDelegate.swift */; };
-		EC54C09F2195D6C300E08990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09E2195D6C300E08990 /* ViewController.swift */; };
+		EC54C09F2195D6C300E08990 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */; };
 		EC54C0A22195D6C300E08990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A02195D6C300E08990 /* Main.storyboard */; };
 		EC54C0A42195D6C600E08990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A32195D6C600E08990 /* Assets.xcassets */; };
 		EC54C0A72195D6C600E08990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A52195D6C600E08990 /* LaunchScreen.storyboard */; };
+		EC54C0B52196147600E08990 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC54C0B32196147600E08990 /* DataModel.xcdatamodeld */; };
+		EC54C0D82196411500E08990 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C0D72196411500E08990 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC54C0992195D6C300E08990 /* GG Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GG Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC54C09C2195D6C300E08990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC54C09E2195D6C300E08990 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		EC54C0A12195D6C300E08990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC54C0A32195D6C600E08990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC54C0A62195D6C600E08990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC54C0A82195D6C600E08990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC54C0B42196147600E08990 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EC54C0D72196411500E08990 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		EC54C09B2195D6C300E08990 /* GG Todo */ = {
 			isa = PBXGroup;
 			children = (
-				EC54C09C2195D6C300E08990 /* AppDelegate.swift */,
-				EC54C09E2195D6C300E08990 /* ViewController.swift */,
-				EC54C0A02195D6C300E08990 /* Main.storyboard */,
+				EC54C0AE2195EE6A00E08990 /* Model */,
+				EC54C0AF2195EE7A00E08990 /* View */,
+				EC54C0B02195EE8400E08990 /* Controller */,
 				EC54C0A32195D6C600E08990 /* Assets.xcassets */,
 				EC54C0A52195D6C600E08990 /* LaunchScreen.storyboard */,
 				EC54C0A82195D6C600E08990 /* Info.plist */,
 			);
 			path = "GG Todo";
+			sourceTree = "<group>";
+		};
+		EC54C0AE2195EE6A00E08990 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC54C0B32196147600E08990 /* DataModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC54C0AF2195EE7A00E08990 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC54C0A02195D6C300E08990 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC54C0B02195EE8400E08990 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC54C09C2195D6C300E08990 /* AppDelegate.swift */,
+				EC54C0D72196411500E08990 /* CategoryViewController.swift */,
+				EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC54C09F2195D6C300E08990 /* ViewController.swift in Sources */,
+				EC54C0D82196411500E08990 /* CategoryViewController.swift in Sources */,
+				EC54C09F2195D6C300E08990 /* ToDoListViewController.swift in Sources */,
+				EC54C0B52196147600E08990 /* DataModel.xcdatamodeld in Sources */,
 				EC54C09D2195D6C300E08990 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC54C0B32196147600E08990 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC54C0B42196147600E08990 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EC54C0B42196147600E08990 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC54C0912195D6C300E08990 /* Project object */;
 }
