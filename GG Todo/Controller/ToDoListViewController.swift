@@ -20,20 +20,18 @@ class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
         }
     }
     
-    var categoryColor: String?
-    
    
     @IBOutlet var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.title = selectedCategory?.name
+        
         searchBar.delegate = self
         
-        tableView.rowHeight = 80.0
-//        if let items = defaults.array(forKey: "ToDoListArray") as? [Item] {
-//            itemArray = items
-//        }
+        tableView.rowHeight = 60.0
+
         
     }
 
@@ -63,8 +61,8 @@ class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
         }
         
         
-        cell.backgroundColor = UIColor(hexString: categoryColor ?? "EB5437")
-        cell.textLabel?.textColor = ContrastColorOf(UIColor(hexString: categoryColor ?? "EB5437")!, returnFlat: true)
+        cell.backgroundColor = UIColor(hexString: selectedCategory?.color ?? "EB5437")
+        cell.textLabel?.textColor = ContrastColorOf(UIColor(hexString: selectedCategory?.color ?? "EB5437")!, returnFlat: true)
         
         return cell
     }
