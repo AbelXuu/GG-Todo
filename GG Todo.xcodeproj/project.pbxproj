@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6C39B9BFD237FD4913D2AD75 /* Pods_GG_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B22F76E1D4A02B23A54C66 /* Pods_GG_Todo.framework */; };
+		EC24CB0B219740AF001B39F4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24CB0A219740AF001B39F4 /* Item.swift */; };
+		EC24CB0D219740C1001B39F4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24CB0C219740C1001B39F4 /* Category.swift */; };
 		EC54C09D2195D6C300E08990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09C2195D6C300E08990 /* AppDelegate.swift */; };
 		EC54C09F2195D6C300E08990 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */; };
 		EC54C0A22195D6C300E08990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A02195D6C300E08990 /* Main.storyboard */; };
 		EC54C0A42195D6C600E08990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A32195D6C600E08990 /* Assets.xcassets */; };
 		EC54C0A72195D6C600E08990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A52195D6C600E08990 /* LaunchScreen.storyboard */; };
-		EC54C0B52196147600E08990 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC54C0B32196147600E08990 /* DataModel.xcdatamodeld */; };
 		EC54C0D82196411500E08990 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C0D72196411500E08990 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,8 @@
 		13B22F76E1D4A02B23A54C66 /* Pods_GG_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GG_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3241313D5ACF00C501C0EC6F /* Pods-GG Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GG Todo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GG Todo/Pods-GG Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		53AD9F3CDCB753EA100097C9 /* Pods-GG Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GG Todo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GG Todo/Pods-GG Todo.release.xcconfig"; sourceTree = "<group>"; };
+		EC24CB0A219740AF001B39F4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EC24CB0C219740C1001B39F4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EC54C0992195D6C300E08990 /* GG Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GG Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC54C09C2195D6C300E08990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +31,6 @@
 		EC54C0A32195D6C600E08990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC54C0A62195D6C600E08990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC54C0A82195D6C600E08990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC54C0B42196147600E08990 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EC54C0D72196411500E08990 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +97,8 @@
 		EC54C0AE2195EE6A00E08990 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC54C0B32196147600E08990 /* DataModel.xcdatamodeld */,
+				EC24CB0C219740C1001B39F4 /* Category.swift */,
+				EC24CB0A219740AF001B39F4 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,10 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC24CB0B219740AF001B39F4 /* Item.swift in Sources */,
 				EC54C0D82196411500E08990 /* CategoryViewController.swift in Sources */,
 				EC54C09F2195D6C300E08990 /* ToDoListViewController.swift in Sources */,
-				EC54C0B52196147600E08990 /* DataModel.xcdatamodeld in Sources */,
 				EC54C09D2195D6C300E08990 /* AppDelegate.swift in Sources */,
+				EC24CB0D219740C1001B39F4 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +405,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HN6Y4XENNV;
 				INFOPLIST_FILE = "GG Todo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yupeng.GG-Todo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -417,7 +424,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HN6Y4XENNV;
 				INFOPLIST_FILE = "GG Todo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yupeng.GG-Todo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -447,19 +457,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EC54C0B32196147600E08990 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EC54C0B42196147600E08990 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = EC54C0B42196147600E08990 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EC54C0912195D6C300E08990 /* Project object */;
 }
