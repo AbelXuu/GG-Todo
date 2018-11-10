@@ -1,5 +1,8 @@
 GG Todo is a to-do list app.
 
+v1.2.1:
+1. Add different background colors to different category cells and their corresponding item cells
+
 v1.2:
 1. User can swipe the cell to delete categories and items
 

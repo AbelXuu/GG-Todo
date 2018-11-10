@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
     var todoItems: Results<Item>?
@@ -18,6 +19,8 @@ class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
             loadItems()
         }
     }
+    
+    var categoryColor: String?
     
    
     @IBOutlet var searchBar: UISearchBar!
@@ -59,6 +62,9 @@ class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
             cell.textLabel?.text = "No items added"
         }
         
+        
+        cell.backgroundColor = UIColor(hexString: categoryColor ?? "EB5437")
+        cell.textLabel?.textColor = ContrastColorOf(UIColor(hexString: categoryColor ?? "EB5437")!, returnFlat: true)
         
         return cell
     }
