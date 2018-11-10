@@ -10,6 +10,7 @@
 		6C39B9BFD237FD4913D2AD75 /* Pods_GG_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B22F76E1D4A02B23A54C66 /* Pods_GG_Todo.framework */; };
 		EC24CB0B219740AF001B39F4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24CB0A219740AF001B39F4 /* Item.swift */; };
 		EC24CB0D219740C1001B39F4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24CB0C219740C1001B39F4 /* Category.swift */; };
+		EC24CB0F21975E7E001B39F4 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24CB0E21975E7E001B39F4 /* SwipeTableViewController.swift */; };
 		EC54C09D2195D6C300E08990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09C2195D6C300E08990 /* AppDelegate.swift */; };
 		EC54C09F2195D6C300E08990 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */; };
 		EC54C0A22195D6C300E08990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC54C0A02195D6C300E08990 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		53AD9F3CDCB753EA100097C9 /* Pods-GG Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GG Todo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GG Todo/Pods-GG Todo.release.xcconfig"; sourceTree = "<group>"; };
 		EC24CB0A219740AF001B39F4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC24CB0C219740C1001B39F4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EC24CB0E21975E7E001B39F4 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		EC54C0992195D6C300E08990 /* GG Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GG Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC54C09C2195D6C300E08990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EC54C09C2195D6C300E08990 /* AppDelegate.swift */,
+				EC24CB0E21975E7E001B39F4 /* SwipeTableViewController.swift */,
 				EC54C0D72196411500E08990 /* CategoryViewController.swift */,
 				EC54C09E2195D6C300E08990 /* ToDoListViewController.swift */,
 			);
@@ -233,11 +236,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GG Todo/Pods-GG Todo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,6 +260,7 @@
 				EC54C0D82196411500E08990 /* CategoryViewController.swift in Sources */,
 				EC54C09F2195D6C300E08990 /* ToDoListViewController.swift in Sources */,
 				EC54C09D2195D6C300E08990 /* AppDelegate.swift in Sources */,
+				EC24CB0F21975E7E001B39F4 /* SwipeTableViewController.swift in Sources */,
 				EC24CB0D219740C1001B39F4 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

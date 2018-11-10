@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ToDoListViewController: UITableViewController, UISearchBarDelegate {
+class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
     var todoItems: Results<Item>?
     let realm = try! Realm()
     
@@ -27,6 +27,7 @@ class ToDoListViewController: UITableViewController, UISearchBarDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         searchBar.delegate = self
         
+        tableView.rowHeight = 80.0
 //        if let items = defaults.array(forKey: "ToDoListArray") as? [Item] {
 //            itemArray = items
 //        }
@@ -42,7 +43,7 @@ class ToDoListViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = todoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
@@ -113,9 +114,10 @@ class ToDoListViewController: UITableViewController, UISearchBarDelegate {
                 catch {
                     print("Error saving new items, \(error)")
                 }
+                self.tableView.reloadData()
             }
         
-            self.tableView.reloadData()
+            
         }))
         
         
@@ -134,6 +136,21 @@ class ToDoListViewController: UITableViewController, UISearchBarDelegate {
         tableView.reloadData()
     
         
+    }
+    
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let itemForDeletion = self.todoItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(itemForDeletion)
+                }
+            }
+            catch {
+                print("Error deleting cell \(error)")
+            }
+            //self.tableView.reloadData()
+        }
     }
     
     
