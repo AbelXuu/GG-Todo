@@ -1,4 +1,4 @@
-GG Todo is to do list app.
+GG Todo is a to-do list app.
 
 v1.1:
 1. Use realm instead of CoreData
