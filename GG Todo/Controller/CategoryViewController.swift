@@ -112,12 +112,18 @@ class CategoryViewController: SwipeTableViewController {
         }
         
         alert.addAction(UIAlertAction(title: "Add category", style: .default, handler: { (action) in
+            if textField.text == ""
+            {
+                print("Please create a new category")
+            }
+            else {
+                let newCategory = Category()
+                newCategory.name = textField.text!
+                newCategory.color = UIColor.randomFlat.hexValue()
+                
+                self.saveCategories(newCategory)
+            }
             
-            let newCategory = Category()
-            newCategory.name = textField.text!
-            newCategory.color = UIColor.randomFlat.hexValue()
-            
-            self.saveCategories(newCategory)
             
         }))
         

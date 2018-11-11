@@ -1,5 +1,8 @@
 GG Todo is a to-do list app.
 
+v1.2.2:
+1. Bug fixed: Users are not allowed to input empty category name or item
+
 v1.2.1:
 1. Add different background colors to different category cells and their corresponding item cells
 

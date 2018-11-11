@@ -106,20 +106,28 @@ class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
         
         
         alert.addAction(UIAlertAction(title: "Add Item", style: .default, handler: { (action) in
-            if let currentCategory = self.selectedCategory {
-                do {
-                    try self.realm.write {
-                        let newItem = Item()
-                        newItem.title = textField.text!
-                        newItem.dateCreated = Date()
-                        currentCategory.items.append(newItem)
-                    }
-                }
-                catch {
-                    print("Error saving new items, \(error)")
-                }
-                self.tableView.reloadData()
+            if textField.text == ""
+            {
+                print("Please create a new item")
             }
+            else {
+                if let currentCategory = self.selectedCategory {
+                    do {
+                        try self.realm.write {
+                            let newItem = Item()
+                            newItem.title = textField.text!
+                            newItem.dateCreated = Date()
+                            currentCategory.items.append(newItem)
+                        }
+                    }
+                    catch {
+                        print("Error saving new items, \(error)")
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+            
+            
         
             
         }))
