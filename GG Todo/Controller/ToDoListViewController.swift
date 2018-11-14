@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import ChameleonFramework
+import Firebase
 
 class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
     var todoItems: Results<Item>?
@@ -25,6 +26,9 @@ class ToDoListViewController: SwipeTableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "d82929")
+        
         
         self.title = selectedCategory?.name
         

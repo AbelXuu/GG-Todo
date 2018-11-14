@@ -9,9 +9,11 @@
 import UIKit
 import RealmSwift
 import ChameleonFramework
+import Firebase
 
 class CategoryViewController: SwipeTableViewController {
 
+   
     let realm = try! Realm()
     
     var categories: Results<Category>?
@@ -20,6 +22,9 @@ class CategoryViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "d82929")
+        
         loadCategories()
 
         tableView.rowHeight = 80.0
@@ -128,6 +133,30 @@ class CategoryViewController: SwipeTableViewController {
         }))
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func logOut(action: UIAlertAction) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        }
+        catch {
+            print("error: there was a problem logging out")
+        }
+    }
+    
+    
+    
+    
+    @IBAction func logoutButtonClicked(_ sender: Any) {
+        let alert = UIAlertController(title: "Are you sure to log out?", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: logOut))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
  
